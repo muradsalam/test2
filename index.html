@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="muraz" style="height: 200px; width: 200px;" onclick="const score = 0; const total = `${score + 10}`; document.querySelector('#ayaz').innerHTML = total">murad</h1>
+    <h1 id="muraz" style="height: 200px; width: 200px;" onclick="total = `${score + 10}`; document.querySelector('#ayaz').innerHTML = total">murad</h1>
+    <h2 id="ayaz">0</h2>
+
+    <script>
+        
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test</h1>
+
+    <div class="questions">
+        <div class="question">
+            <h2>1. CSS  Nedir?</h2>
+            <button id="btn1" onclick="checkAnswer(this)
+            ">Cascading Style Sheets</button>
+            <button id="btn2" onclick="checkAnswer(this)">Comunity Style Sheets</button>
+            <button id="btn3" onclick="checkAnswer(this)">Cascading Style Slides</button>
+            <button id="btn4" onclick="checkAnswer(this)">Comunity Style Slides</button>
+        </div>
+        
+        <div class="question">
+            <h2>2. CSS-i Neucun ishdedirler?</h2>
+            <button id="btn5" onclick="checkAnswer(this)">Veb səhifələrin strukturunu və məzmununu təyin etmək üçün istifadə olunur</button>
+            <button id="btn6" onclick="checkAnswer(this)"> Veb səhifələrin görünüşünü idarə etməyə kömək edir.</button>
+            <button id="btn7" onclick="checkAnswer(this)"> Veb səhifələrinin interaktivliyini, dinamik funksiyalarını və məzmununu idarə etməyə kömək edir.</button>
+            <button id="btn8" onclick="checkAnswer(this)">Geniş bir proqramlaşdırma dilidir və təhlükəsiz, yaxşı bir şəkildə dokumentə edilmiş, oxunması və anlaşılması asan kodlar yaradmaq üçün istifadə edilir.</button>
+        </div>
+
+        <div class="question">
+            <h2>3. Margin ve Padding arasinda ne ferg var?</h2>
+            <button id="btn9" onclick="checkAnswer(this)
+            ">Margin (Dolğunluq), Padding (Kenar boşluğu)</button>
+            <button id="btn10" onclick="checkAnswer(this)">Fergi Yoxdur. Eynidiler</button>
+            <button id="btn11" onclick="checkAnswer(this)">Margin (Midpointd), Padding (Kenar boşluğu)</button>
+            <button id="btn12" onclick="checkAnswer(this)">Margin (Kenar boşluğu), Padding (Dolğunluq)</button>
+        </div>
+
+        <div class="question">
+            <h2>4. Yığışmış elementlər üzərində olan bir modallaşma pəncərəsi:</h2>
+            <button id="btn13" onclick="checkAnswer(this)
+            ">Modal pəncərənin üstünə digər elementlər göstərilmir, yalnızca modal pəncərə aktivləşdiyində</button>
+            <button id="btn14" onclick="checkAnswer(this)">Modal pəncərə üzərindəki elementlərə nüfuz etməmək üçün daha böyük bir z-index dəyəri</button>
+            <button id="btn15" onclick="checkAnswer(this)">Modal pəncərənin arxasındakı digər məzmunları qeyri-aktivləşdirmək üçün daha kiçik bir z-index dəyəri</button>
+        </div>
+
+        <div class="question">
+            <h2>5. Üstünə klik etmək üçün digər elementlərin üzərində olan bir menu:</h2>
+            <button id="btn16" onclick="checkAnswer(this)
+            ">Digər elementlərin gözətçi şəkildə yerləşməsinə imkan verir, yalnızca müəyyən bir elementin üzərində olduğu zaman görünür</button>
+            <button id="btn17" onclick="checkAnswer(this)">Elementləri hündürlük sırasına görə üzərindən başqa elementlərin üstünə çıxmaq</button>
+            <button id="btn18" onclick="checkAnswer(this)">Daha yüksək z-index dəyəri, digər elementlərdən daha yuxarıda yerləşdirilmiş elementlərə imkan verir</button>
+        </div>
+
+        <div class="question">
+            <h2>6. Menyu, karusel və ya qarışıq tətbiqlər üzərindəki elementlərin yerləşmə sırasını nizamlamaq üçün:</h2>
+            <button id="btn19" onclick="checkAnswer(this)
+            ">Bir menyunun, karuselin və ya bir widgetin üzərindəki elementlərə üstünlük vermək üçün z-index dəyəri təyin etmək</button>
+            <button id="btn20" onclick="checkAnswer(this)">Elementlərin yerləşmə sırasını nizamlamaq üçün dinamik olaraq z-index dəyərini dəyişdirmək</button>
+            <button id="btn21" onclick="checkAnswer(this)">Bir elementin digərindən üstündə olması tələb olunan hallarda z-index özelliyini istifadə etmək</button>
+        </div>
+
+        <div class="question">
+            <h2>7. CSS-in əsas sintaksi nədir?</h2>
+            <button id="btn22" onclick="checkAnswer(this)
+            ">{selector {property: value;}}</button>
+            <button id="btn23" onclick="checkAnswer(this)">(selector: {property: value;})</button>
+            <button id="btn24" onclick="checkAnswer(this)">[selector: {property: value;}]</button>
+            <button id="btn25" onclick="checkAnswer(this)"><selector>{property: value;}</button>
+        </div>
+        
+        <div class="question">
+            <h2>8. CSS-in əsas məqsədi nədir?</h2>
+            <button id="btn26" onclick="checkAnswer(this)">HTML sənədlərinin strukturunu təyin etmək</button>
+            <button id="btn27" onclick="checkAnswer(this)">Veb səhifələrinin məzmununu dinamikləşdirmək</button>
+            <button id="btn28" onclick="checkAnswer(this)">JavaScript funksiyalarını yaratmaq</button>
+            <button id="btn29" onclick="checkAnswer(this)"></button>
+        </div>
+
+        <div class="question">
+            <h2>9. CSS'də rəngləri ifadə etmək üçün hansı funksiya istifadə olunur?</h2>
+            <button id="btn30" onclick="checkAnswer(this)
+            ">color()</button>
+            <button id="btn31" onclick="checkAnswer(this)">style()</button>
+            <button id="btn32" onclick="checkAnswer(this)">rgb()</button>
+            <button id="btn33" onclick="checkAnswer(this)"> format()</button>
+        </div>
+
+        <div class="question">
+            <h2>10. Flexbox CSS modeli nə üçün istifadə olunur?</h2>
+            <button id="btn34" onclick="checkAnswer(this)
+            ">Elementlərin düzənini və qutular arasındakı məsafəni nizamlamaq üçün</button>
+            <button id="btn35" onclick="checkAnswer(this)">Elementlərin üstünlük sırasını nizamlamaq üçün</button>
+            <button id="btn36" onclick="checkAnswer(this)">Elementlərin pozisiyasını təyin etmək üçün</button>
+        </div>
+
+        <!-- Add more questions here -->
+
+    </div>
+
+    <button onclick="calculateScore()">Submit</button>
+    <div id="score"></div>
+
+    <script>
+        let score = 0;
+
+        function checkAnswer(button) {
+            if (button.id === "btn1" || button.id === "btn6" || button.id === "btn12" || button.id === "btn14" || button.id == "btn18" || button.id === "btn21" || button.id === "btn22" || button.id === "btn28" || button.id === "btn32" || button.id === "btn34") {
+                score += 10;
+            }
+        }
+
+        function calculateScore() {
+            document.getElementById('score').innerHTML = 'Your score is: ' +score + '/100';
+        }
+    </script>
+</body>
+</html>
