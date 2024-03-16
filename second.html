@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="margin: 2%; margin-bottom: 5%;">
+    <h1>Test</h1>
+
+    <div class="questions">
+        <div class="question">
+            <h2>1. What is CSS?</h2>
+            <button id="btn1" onclick="checkAnswer(this)">Cascading Style Sheets</button>
+            <button id="btn2" onclick="checkAnswer(this)">Community Style Sheets</button>
+            <button id="btn3" onclick="checkAnswer(this)">Cascading Style Slides</button>
+            <button id="btn4" onclick="checkAnswer(this)">Community Style Slides</button>
+        </div>
+        
+        <div class="question">
+            <h2>2. What are CSS used for?</h2>
+            <button id="btn5" onclick="checkAnswer(this)">Used to define the structure and content of web pages</button>
+            <button id="btn6" onclick="checkAnswer(this)">Helps to manage the appearance of web pages.</button>
+            <button id="btn7" onclick="checkAnswer(this)">Helps to manage the interactivity, dynamic functions, and content of web pages.</button>
+            <button id="btn8" onclick="checkAnswer(this)">It is a comprehensive programming language used to create well-documented, easily readable and understandable codes.</button>
+        </div>
+
+        <div class="question">
+            <h2>3. What is the difference between Margin and Padding?</h2>
+            <button id="btn9" onclick="checkAnswer(this)">Margin (Spacing), Padding (Space around)</button>
+            <button id="btn10" onclick="checkAnswer(this)">No Difference. They are the same</button>
+            <button id="btn11" onclick="checkAnswer(this)">Margin (Middle), Padding (Space around)</button>
+            <button id="btn12" onclick="checkAnswer(this)">Margin (Space around), Padding (Spacing)</button>
+        </div>
+
+        <div class="question">
+            <h2>4. A modal window that appears over stacked elements:</h2>
+            <button id="btn13" onclick="checkAnswer(this)">Modal window doesn't display other elements on top of it, only when the modal window is active</button>
+            <button id="btn14" onclick="checkAnswer(this)">Higher z-index value to not penetrate elements on the modal window</button>
+            <button id="btn15" onclick="checkAnswer(this)">Lower z-index value to deactivate other contents behind the modal window</button>
+        </div>
+
+        <div class="question">
+            <h2>5. A menu that appears on top of other elements upon clicking:</h2>
+            <button id="btn16" onclick="checkAnswer(this)">Allows other elements to be visible, only when hovering over a specific element</button>
+            <button id="btn17" onclick="checkAnswer(this)">Elements to come on top of other elements according to their z-index order</button>
+            <button id="btn18" onclick="checkAnswer(this)">Higher z-index value allows elements to be placed above other elements</button>
+        </div>
+
+        <div class="question">
+            <h2>6. To arrange the stacking order of elements over a menu, carousel, or overlay application:</h2>
+            <button id="btn19" onclick="checkAnswer(this)">Assigning a z-index value to prioritize elements over a menu, carousel, or widget</button>
+            <button id="btn20" onclick="checkAnswer(this)">Dynamically changing z-index value to arrange the stacking order of elements</button>
+            <button id="btn21" onclick="checkAnswer(this)">Using z-index property when one element needs to be on top of another</button>
+        </div>
+
+        <div class="question">
+            <h2>7. What is the basic syntax of CSS?</h2>
+            <button id="btn22" onclick="checkAnswer(this)">{selector {property: value;}}</button>
+            <button id="btn23" onclick="checkAnswer(this)">(selector: {property: value;})</button>
+            <button id="btn24" onclick="checkAnswer(this)">[selector: {property: value;}]</button>
+            <button id="btn25" onclick="checkAnswer(this)">&lt;selector&gt;{property: value;}</button>
+        </div>
+        
+        <div class="question">
+            <h2>8. What is the main purpose of CSS?</h2>
+            <button id="btn26" onclick="checkAnswer(this)">To define the structure of HTML documents</button>
+            <button id="btn27" onclick="checkAnswer(this)">To dynamically change the content of web pages</button>
+            <button id="btn28" onclick="checkAnswer(this)">To create JavaScript functions</button>
+        </div>
+
+        <div class="question">
+            <h2>9. Which function is used to express colors in CSS?</h2>
+            <button id="btn30" onclick="checkAnswer(this)">color()</button>
+            <button id="btn31" onclick="checkAnswer(this)">style()</button>
+            <button id="btn32" onclick="checkAnswer(this)">rgb()</button>
+            <button id="btn33" onclick="checkAnswer(this)">format()</button>
+        </div>
+
+        <div class="question">
+            <h2>10. What is Flexbox CSS model used for?</h2>
+            <button id="btn34" onclick="checkAnswer(this)">To arrange the layout and spacing between boxes</button>
+            <button id="btn35" onclick="checkAnswer(this)">To arrange the stacking order of elements</button>
+            <button id="btn36" onclick="checkAnswer(this)">To define the position of elements</button>
+        </div>
+    </div>
+
+    <button><a href="index.html">Azerbaycan diline teercume et.</a></button><br><br>
+    <button onclick="calculateScore()">Submit</button>
+    <div id="score"></div>
+    <div id="incorrect"></div>
+
+    <script>
+        let score = 0;
+        let incorrect = 0;
+
+        function checkAnswer(button) {
+            if (button.id === "btn1" || button.id === "btn6" || button.id === "btn12" || button.id === "btn14" || button.id == "btn18" || button.id === "btn21" || button.id === "btn22" || button.id === "btn28" || button.id === "btn32" || button.id === "btn34") {
+                score += 10;
+            } else {
+                incorrect += 10;
+            };
+            button.disabled = true;
+        }
+
+        function calculateScore() {
+            document.getElementById('score').innerHTML = 'Your score is: ' +score + '/100';
+            document.getElementById('incorrect').innerHTML = 'Your score of incorrect answers score is: ' + incorrect;
+        }
+    </script>
+</body>
+</html>
